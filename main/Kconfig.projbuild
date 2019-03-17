@@ -1,0 +1,40 @@
+menu "Sensor Configuration"
+
+config WIFI_SSID
+    string "WiFi SSID"
+    default "myssid"
+    help
+        SSID (network name) for the example to connect to.
+
+config WIFI_PASSWORD
+    string "WiFi Password"
+    default "mypassword"
+    help
+        WiFi password (WPA or WPA2) for the example to use.
+        Can be left blank if the network has no security set.
+
+config MQTT_BROKER
+    string "MQTT broker"
+    default "mosquitto.org"
+    help
+        MQTT broker which you want to login, either IP address or domain name is OK.
+
+config MQTT_PORT
+    int "Default MQTT port"
+    default 1883
+    help
+        MQTT port.
+
+config MQTT_PUB_TOPIC
+    string "MQTT publish topic"
+    default "/espressif/pub"
+    help
+        MQTT publish topic to MQTT broker.
+
+config MQTT_PUBLISH_INTERVAL
+    int "MQTT publish interval(s)"
+    default 60
+    help
+        Default MQTT publish message interval.
+
+endmenu
